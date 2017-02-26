@@ -15,25 +15,10 @@ public abstract class Elelmiszer extends Aru {
 		this.szavatossagiIdo = szavatossagiIdo;
 		
 	}
-	public boolean joMeg(){
-		Date d = new Date();
-		d.before(szavatossagiIdo);
-		
-		return true;
-	}
-	public Long getVonalKod(){
-		return vonalKod;
-	}
-	public String getGyarto(){
-		return gyarto;
-	}
-	
-	public Date getSzavatossagiIdo(){
-		return szavatossagiIdo;
-	}
-	
-	public String toString(){
-		return getGyarto() + " " + getSzavatossagiIdo() + " " + getVonalKod();
-	}
+    public abstract Long getVonalKod();
+    public abstract String getGyarto();
+    public abstract Date getSzavatossagiIdo();
+    public abstract boolean joMeg();
+    public abstract String toString();
 
 }

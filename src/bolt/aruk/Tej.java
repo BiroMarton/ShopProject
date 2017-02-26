@@ -6,10 +6,10 @@ import bolt.aruk.Elelmiszer;
 
 public abstract class Tej extends Elelmiszer{
 	protected Long vonalKod;
-	public final int LITER = 1000;
-	public final int FELLITER = 500;
-	public final double ZSIROS = 2.8;
-	public final double FELZSIROS = 1.5;
+	public static final int LITER = 1000;
+	public static final int FELLITER = 500;
+	public static final double ZSIROS = 2.8;
+	public static final double FELZSIROS = 1.5;
 	
 	protected int urtartalom;
 	protected String gyarto;
@@ -29,11 +29,19 @@ public abstract class Tej extends Elelmiszer{
 	}
 	
 	public boolean joMeg(){
-		Date d = new Date();
-		d.before(szavatossagiIdo);
-		
-		return true;
-	}
+        Date currentTime = new Date();
+
+
+        if(currentTime.before(getSzavatossagiIdo()))
+        {
+            return true;
+        }
+        else if(currentTime.equals(getSzavatossagiIdo()))
+        {
+            return true;
+        }
+        return false;
+    }
 	
 	public int getUrtartalom(){
 		return urtartalom;
