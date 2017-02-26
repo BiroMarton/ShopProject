@@ -1,4 +1,4 @@
-package kivetel;
+package bolt.kivetel;
 import bolt.BoltKivetel;
 
 public class NemLetezoAruKivetel extends BoltKivetel {

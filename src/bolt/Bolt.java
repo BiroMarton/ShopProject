@@ -1,6 +1,7 @@
 package bolt;
 
 import java.util.Hashtable;
+import bolt.aruk.*;
 
 public class Bolt {
 	private String nev;

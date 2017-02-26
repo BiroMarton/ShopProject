@@ -1,6 +1,8 @@
-package bolt;
+package bolt.aruk;
 
 import java.util.Date;
+
+import bolt.aruk.Elelmiszer;
 
 public class Sajt extends Elelmiszer{
 	private double suly;
